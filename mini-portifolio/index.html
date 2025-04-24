@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Davi Chavante | Desenvolvedor Full-Stack</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header style="background: var(--primary); color: white; padding: 3rem 1rem 5rem; text-align: center;">
+        <h1 style="font-size: 2.8rem; margin-bottom: 0.5rem;">Davi Chavante</h1>
+        <p style="font-size: 1.1rem;">Desenvolvedor Full-Stack | Sistemas de Informação - PUC Minas</p>
+    </header>
+
+    <div style="display: flex; justify-content: center; margin-top: -70px; margin-bottom: 3rem;">
+        <img src="imgs/perfil.png" alt="Perfil" 
+             style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 4px solid white; box-shadow: 0 4px 20px rgba(0,0,0,0.15); transition: transform 0.3s ease;">
+      </div>
+  <nav>
+    <a href="#projetos">Projetos</a>
+    <a href="#contato">Contato</a>
+    <a href="https://www.linkedin.com/in/davi-chavante-638274285/" target="_blank">LinkedIn</a>
+    <a href="https://github.com/o-Davi" target="_blank">GitHub</a>
+  </nav>
+  
+  <div class="container">
+    <section id="sobre">
+        <h2>Sobre Mim</h2>
+        <p>
+          Prazer, sou Davi Chavante — apaixonado por tecnologia, movido por desafios e em constante evolução. 
+          Atualmente, mergulho de cabeça no universo da programação enquanto curso Sistemas de Informação na PUC Minas, 
+          com um propósito de dominar o desenvolvimento full-stack e transformar ideias em soluções digitais.
+        </p>
+        <p>
+          Minha jornada já passou pelo setor público, onde automatizei processos com Apps Script, e também por projetos 
+          acadêmicos onde pude aplicar HTML, CSS, JavaScript, C# e .NET. 
+          A cada código que escrevo, busco mais do que funcionalidades, procuro entregar experiências.
+        </p>
+        <p>
+          Valorizo o aprendizado contínuo, a clareza na comunicação e a capacidade de adaptação. Estou sempre aberto a 
+          novas frentes dentro da TI. 
+          Se você está procurando alguém que aprenda rápido, que resolva com criatividade e que esteja pronto para somar, 
+          vamos conversar.
+        </p>
+    </section>      
+
+    <section id="projetos">
+        <h2>Projetos</h2>
+        <div class="projects">
+          <div class="project">
+            <a href="https://github.com/o-Davi/pmv-si-2023-2-pe5-t4-t5-grp08" target="_blank" style="text-decoration: none; color: inherit;">
+              <img src="imgs/reserv.png" alt="Sistema de Restaurantes" style="width:100%; border-radius: 5px; margin-bottom: 0.5rem;">
+              <h3>Sistema de Restaurantes</h3>
+              <p>Página html estática pensada para simplificar as reservas em restaurantes.</p>
+            </a>
+          </div>
+      
+          <div class="project">
+            <a href="https://github.com/o-Davi/LocaFacil" target="_blank" style="text-decoration: none; color: inherit;">
+                <img src="imgs/locafacil.png" alt="LocaFácil" style="width:100%; border-radius: 5px; margin-bottom: 0.5rem;">
+                <h3>Loca Fácil</h3>
+                <p>Sistema para locadoras de veículos, que visa viabilizar e modernizar o processo de locação de veículos.</p>
+            </a>
+          </div>
+        </div>
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+      <form id="contatoForm" action="https://formsubmit.co/davichavantecarlos@gmail.com" method="POST">
+        <input type="text" name="name" placeholder="Seu nome" required>
+        <input type="email" name="email" placeholder="Seu e-mail" required>
+        <textarea name="message" rows="5" placeholder="Sua mensagem" required></textarea>
+        <input type="hidden" name="_captcha" value="false">
+        <input type="submit" value="Enviar mensagem">
+      </form>
+
+      <div id="mensagemSucesso" style="display:none; margin-top: 1rem; color: green; font-weight: bold;">
+        Mensagem enviada com sucesso!
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById('contatoForm');
+        const mensagem = document.getElementById('mensagemSucesso');
+    
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+    
+          fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+            headers: {
+              'Accept': 'application/json'
+            }
+          }).then(response => {
+            if (response.ok) {
+              form.reset();
+              mensagem.style.display = 'block';
+            } else {
+              alert('Erro ao enviar. Tente novamente mais tarde.');
+            }
+          }).catch(error => {
+            alert('Erro de conexão. Verifique sua internet.');
+          });
+        });
+      });
+    </script>
+    
+  <footer>
+    &copy; 2025 Davi Chavante | Lagoa Santa - MG
+  </footer>
+</body>
+
+
