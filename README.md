@@ -18,8 +18,8 @@ Este site foi pensado para destacar minha trajetória como estudante de Sistemas
 
 ## 📂 Estrutura de Diretórios
 
-```bash
-mini-portfolio/
-├── index.html
-├── style.css 
-├── README.md
+- [`index.html`](./index.html)
+- [`style.css`](./style.css)
+- [`README.md`](./README.md)
+
+
