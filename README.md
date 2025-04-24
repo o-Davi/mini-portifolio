@@ -18,8 +18,9 @@ Este site foi pensado para destacar minha trajetória como estudante de Sistemas
 
 ## 📂 Estrutura de Diretórios
 
-- [`index.html`](./index.html)
-- [`style.css`](./style.css)
-- [`README.md`](./README.md)
+- [`mini-portifolio/index.html`](./mini-portifolio/index.html) — página principal
+- [`mini-portifolio/style.css`](./mini-portifolio/style.css) — estilos personalizados
+- [`README.md`](./README.md) — este arquivo
+
 
 
